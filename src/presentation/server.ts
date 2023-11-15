@@ -25,7 +25,7 @@ export class Server {
 
         this.app.get('*',(req,res)=>{
             console.log(__dirname)
-            const indexPath = path.join(__dirname,`../../${this.publicPath}/index.html`);
+            const indexPath = path.join(__dirname+`../../../${this.publicPath}/index.html`);
             res.sendFile(indexPath);
             return;
         })
